@@ -1,0 +1,58 @@
+
+
+
+model = PPO("MlpPolicy", env, learning_rate=3e-4,n_steps=2048,batch_size=256,gamma=0.99,gae_lambda=0.95,clip_range=0.2,ent_coef=0, policy_kwargs=dict(net_arch=dict(pi=[64, 64], vf=[64, 64])),)
+5000 iterations
+single
+Загальний reward: 1251156.8127939699
+середнє reward: 250.23136255879396
+Загальний  success: 4507
+
+
+model = PPO("MlpPolicy", env, learning_rate=3e-4,n_steps=2048,batch_size=256,gamma=0.99,gae_lambda=0.95,clip_range=0.2,ent_coef=0, policy_kwargs=dict(net_arch=dict(pi=[256, 256], vf=[256, 256])),)
+5000 iterations
+single
+Загальний reward: 1273220.8516241948
+середнє reward: 254.64417032483897
+Загальний  success: 4595
+
+model = PPO("MlpPolicy", env, learning_rate=3e-4,n_steps=2048,batch_size=256,gamma=0.99,gae_lambda=0.95,clip_range=0.2,ent_coef=0, policy_kwargs=dict(net_arch=dict(pi=[64, 64], vf=[64, 64])),)
+model = PPO("MlpPolicy", env, learning_rate=3e-4,n_steps=2048,batch_size=256,gamma=0.99,gae_lambda=0.95,clip_range=0.2,ent_coef=0, policy_kwargs=dict(net_arch=dict(pi=[256, 256], vf=[256, 256])),)
+approximation of results
+5000 iterations
+Загальний reward: 1255219.5223852014
+середнє reward: 251.0439044770403
+Загальний  success: 4510
+
+meta_model obs_dim 16
+rst meta model
+Загальний reward: 919105.4336916495
+середнє reward: 183.82108673832988
+Загальний  success: 3675
+
+meta model obs_dim 10
+meta model with limited obs space
+Загальний reward: 696130.9648893862
+середнє reward: 139.22619297787725
+Загальний  success: 1859
+
+
+switching between 2 models by coords y
+Загальний reward: 1224647.9607346128
+середнє reward: 244.92959214692254
+Загальний  success: 4273
+
+
+
+q learning instead of meta model
+
+Загальний reward: -364034.19480475725
+середнє reward: -72.80683896095145
+Загальний  success: 40
+
+
+updated meta model
+
+Загальний reward: 1213291.325280116
+середнє reward: 242.6582650560232
+Загальний  success: 4451
